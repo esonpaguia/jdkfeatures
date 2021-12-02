@@ -13,9 +13,7 @@ public class DemoPredictNotMethod {
         List<String> withoutBlanks = sampleList.stream()
                             .filter(Predicate.not(String::isBlank))
                             .collect(Collectors.toList());
-        assertThat(withoutBlanks, Has);
         assertThat(withoutBlanks).containsExactly("Java", "Kotlin");
-        assertTrue(withoutBlanks.containsAll("Java", "Kotlin"));
     }
 
 }
